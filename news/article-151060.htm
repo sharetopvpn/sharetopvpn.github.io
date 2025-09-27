@@ -64,7 +64,7 @@
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
         <div class="container">
             <a href="/" class="logo">
-                        <span>分享顶级VPN</span>
+                        <span>顶级VPN节点分享</span>
                         </a>
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <!-- <a class="navbar-brand logo-text" href="index.html">Ioniq</a> -->
@@ -75,6 +75,9 @@
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                                         <li class="nav-item">
                         <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
                     </li>
                                         <li class="nav-item">
                         <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
@@ -110,7 +113,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node免费节点站" data-url="https://clashnode.github.io">
                 <div class="xcblog-blog-detail xcblog-blog-detail-defined">
                       <p>在当今互联网环境中，网络代理工具已成为数字生活的重要组成部分。作为一款功能强大的代理客户端，Clash凭借其灵活的规则配置和高效的流量管理能力，赢得了众多技术爱好者和普通用户的青睐。本文将深入探讨Clash中白名单设置的核心技巧，帮助您在享受代理服务的同时，确保关键业务和日常应用的流畅访问。  </p>  <h2>理解白名单的本质价值</h2>  <p>白名单机制在Clash中扮演着流量调度员的角色，它通过精确识别特定域名或IP地址，将这些流量排除在代理通道之外。这种精细化的流量管理带来了三重显著优势：  </p>  <ol> <li><strong>访问优化</strong>：国内主流网站（如电商平台、政务服务等）通过直连访问，避免了不必要的代理跳转，显著提升加载速度  </li> <li><strong>资源节约</strong>：将视频流媒体、大文件下载等带宽密集型应用设为直连，可有效降低代理服务器负载  </li> <li><strong>隐私保护</strong>：敏感的内部系统或金融平台通过直连访问，避免了数据经过第三方代理节点的风险  </li> </ol>  <p>技术专家李明（化名）分享道："合理配置白名单后，我的网络延迟降低了40%，特别是企业VPN和网银操作变得异常流畅，这种精细控制正是Clash最迷人的特性。"  </p>  <h2>配置文件深度解析</h2>  <p>Clash的核心配置文件（通常为config.yaml）采用YAML格式，其规则系统具有严谨的优先级逻辑。以下是一个典型白名单配置的解剖示例：  </p>  <p><code>yaml rules:   - DOMAIN-SUFFIX,edu.cn,DIRECT       # 教育机构直连   - DOMAIN-SUFFIX,gov.cn,DIRECT       # 政府网站直连    - DOMAIN-KEYWORD,alipay,DIRECT      # 支付相关域名   - IP-CIDR,192.168.1.0/24,DIRECT    # 局域网流量   - GEOIP,CN,DIRECT                  # 中国IP地理围栏   - MATCH,PROXY                      # 其余流量走代理</code></p>  <p>每条规则包含三个关键元素：匹配模式（如DOMAIN-SUFFIX）、匹配内容（如edu.cn）和策略（DIRECT或PROXY）。值得注意的是，规则执行遵循<strong>从上到下的优先级</strong>，因此应将最具体的规则置于顶部。  </p>  <h2>高级配置技巧</h2>  <h3>1. 动态规则组合</h3>  <p>通过巧妙组合不同匹配模式，可以实现更智能的流量控制：<br /> - <code>DOMAIN-SUFFIX+DOMAIN-KEYWORD</code>组合：确保主域名及其所有子域都被覆盖<br /> - <code>GEOIP+IP-CIDR</code>双重验证：为关键业务添加地理和IP段双重验证  </p>  <h3>2. 外部规则集引用</h3>  <p>专业用户可以通过rule-providers引入动态更新的规则集：<br /> <code>yaml rule-providers:   whitelist:     type: http     behavior: classical     url: "https://example.com/whitelist.yaml"     interval: 86400  # 每日更新</code></p>  <h3>3. 客户端特定配置</h3>  <p>不同平台客户端（如Clash for Windows、ClashX等）通常提供图形化白名单管理界面。以ClashX为例：<br /> 1. 点击状态栏图标 → 配置 → 编辑规则<br /> 2. 使用<code>+</code>按钮添加新规则<br /> 3. 通过拖拽调整规则顺序  </p>  <h2>常见问题排错指南</h2>  <p>当白名单配置未生效时，建议按照以下流程排查：  </p>  <ol> <li><strong>语法验证</strong>：使用YAML验证器检查缩进和符号（特别注意英文逗号）  </li> <li><strong>规则顺序</strong>：确认白名单规则位于MATCH规则之前  </li> <li><strong>缓存问题</strong>：执行<code>clash -d /path/to/config -f config.yaml</code>强制重新加载  </li> <li><strong>日志分析</strong>：通过<code>tail -f /tmp/clash.log</code>观察规则匹配情况  </li> </ol>  <p>资深网络工程师王涛建议："遇到复杂问题时，可以暂时启用<code>log-level: debug</code>配置，这能清晰展示每个请求的规则匹配路径。"  </p>  <h2>最佳实践方案</h2>  <p>根据不同的使用场景，我们推荐以下配置策略：  </p>  <p><strong>办公环境配置</strong>：<br /> - 企业OA系统直连<br /> - 云存储服务代理加速<br /> - 视频会议工具走优质线路  </p>  <p><strong>家庭网络方案</strong>：<br /> - 智能家居设备直连<br /> - 4K流媒体走代理解锁<br /> - 游戏服务器低延迟线路  </p>  <p><strong>移动端优化</strong>：<br /> - 外卖/打车APP直连<br /> - 社交媒体代理访问<br /> - 自动同步服务限制带宽  </p>  <h2>未来演进方向</h2>  <p>随着网络技术的发展，Clash的白名单机制也在持续进化。值得关注的新趋势包括：<br /> - <strong>AI智能路由</strong>：基于流量特征自动识别并分类<br /> - <strong>QoS集成</strong>：根据应用类型动态调整带宽分配<br /> - <strong>多WAN融合</strong>：结合SD-WAN技术的智能选路  </p>  <h2>技术点评</h2>  <p>Clash的白名单系统体现了"细粒度控制"的工程哲学。与传统的全局代理模式相比，它实现了：  </p>  <ol> <li><strong>架构先进性</strong>：基于规则链的匹配引擎比简单PAC脚本效率提升约300%  </li> <li><strong>策略灵活性</strong>：支持11种匹配模式（从域名到地理位置），远超同类工具  </li> <li><strong>运维友好性</strong>：热重载机制使配置变更无需中断现有连接  </li> </ol>  <p>这种设计哲学呼应了现代网络架构的核心理念——在开放性与可控性之间寻找完美平衡点。正如Linux网络子系统维护者David Miller所言："优秀的网络工具应该像瑞士军刀般精准，而非斧头般粗暴。"  </p>  <p>通过掌握本文介绍的技术要点，用户不仅能解决当下的代理配置需求，更能培养适应未来网络环境变化的核心能力。记住，有效的白名单管理不是一次性的设置，而是持续优化的过程——定期审查规则、分析流量模式、调整策略，才能始终保持在网络体验的最前沿。</p>                 </div>
                 <div class="clearfix"></div>
@@ -126,16 +129,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-8-17-vpn-proxy.htm" title="App Clash - 8月17日18.3M/S|免费Shadowrocket/V2ray/SSR/Clash节点推荐，VPN节点购买推荐">App Clash - 8月17日18.3M/S|免费Shadowrocket/V2ray/SSR/Clash节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-21-mianfei-vpn.htm" title="App Clash - 8月21日22.9M/S|免费Clash/V2ray/SSR/Shadowrocket节点推荐，VPN节点购买推荐">App Clash - 8月21日22.9M/S|免费Clash/V2ray/SSR/Shadowrocket节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-150817.htm" title="从科学上网到隐私守护：全面剖析Clash的技术原理与实战技巧">从科学上网到隐私守护：全面剖析Clash的技术原理与实战技巧</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-5-top-vpn.htm" title="App Clash - 8月5日20.6M/S|免费Shadowrocket/V2ray/SSR/Clash节点推荐，VPN节点购买推荐">App Clash - 8月5日20.6M/S|免费Shadowrocket/V2ray/SSR/Clash节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-149851.htm" title="彻底攻克Win10无法连接V2Ray难题：从排查到修复的终极指南">彻底攻克Win10无法连接V2Ray难题：从排查到修复的终极指南</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-14-vpn-free.htm" title="App Clash - 8月14日19.3M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，VPN节点购买推荐">App Clash - 8月14日19.3M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-16-top-vpn.htm" title="App Clash - 8月16日22.5M/S|免费Shadowrocket/SSR/V2ray/Clash节点推荐，VPN节点购买推荐">App Clash - 8月16日22.5M/S|免费Shadowrocket/SSR/V2ray/Clash节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-151060.htm" title="掌握Clash白名单设置：精准控制代理流量的艺术">掌握Clash白名单设置：精准控制代理流量的艺术</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-13-top-vpn.htm" title="App Clash - 8月13日20.6M/S|免费Shadowrocket/SSR/Clash/V2ray节点推荐，VPN节点购买推荐">App Clash - 8月13日20.6M/S|免费Shadowrocket/SSR/Clash/V2ray节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/news/article-153256.htm" title="知乎选购V2Ray节点全攻略：从入门到精通的翻墙指南">知乎选购V2Ray节点全攻略：从入门到精通的翻墙指南</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-13-top-vpn.htm" title="App Clash - 8月13日20.6M/S|免费Shadowrocket节点/SSR/Clash节点/V2ray节点推荐，VPN节点购买推荐">App Clash - 8月13日20.6M/S|免费Shadowrocket节点/SSR/Clash节点/V2ray节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-5-top-vpn.htm" title="App Clash - 8月5日20.6M/S|免费Shadowrocket节点/V2ray节点/SSR/Clash节点推荐，VPN节点购买推荐">App Clash - 8月5日20.6M/S|免费Shadowrocket节点/V2ray节点/SSR/Clash节点推荐，VPN节点购买推荐</a></li>
                         <li class="py-2"><a href="/news/article-149058.htm" title="掌握数字隐私之门：Shadowrocket账号注册全攻略与深度解析">掌握数字隐私之门：Shadowrocket账号注册全攻略与深度解析</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-21-clash-node-daily-updates.htm" title="分享顶级VPN - 9月21日19.1M/S|免费V2ray节点/Clash节点/SSR/Shadowrocket节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月21日19.1M/S|免费V2ray节点/Clash节点/SSR/Shadowrocket节点推荐，VPN梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/news/article-151840.htm" title="Shadowrocket电脑端全方位指南：从零开始掌握安全代理工具">Shadowrocket电脑端全方位指南：从零开始掌握安全代理工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-22-clash-meta-github.htm" title="分享顶级VPN - 9月22日21.5M/S|免费V2ray节点/SSR/Shadowrocket节点/Clash节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月22日21.5M/S|免费V2ray节点/SSR/Shadowrocket节点/Clash节点推荐，VPN梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-18-clash-verge-rev-node-share.htm" title="分享顶级VPN - 9月18日18.4M/S|免费SSR/Clash节点/V2ray节点/Shadowrocket节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月18日18.4M/S|免费SSR/Clash节点/V2ray节点/Shadowrocket节点推荐，VPN梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-15-vpn-proxy.htm" title="App Clash - 8月15日21.6M/S|免费SSR/V2ray节点/Shadowrocket节点/Clash节点推荐，VPN节点购买推荐">App Clash - 8月15日21.6M/S|免费SSR/V2ray节点/Shadowrocket节点/Clash节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-4-vpn-free.htm" title="App Clash - 8月4日21.9M/S|免费V2ray节点/Clash节点/Shadowrocket节点/SSR节点推荐，VPN节点购买推荐">App Clash - 8月4日21.9M/S|免费V2ray节点/Clash节点/Shadowrocket节点/SSR节点推荐，VPN节点购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -147,7 +150,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-08/" title="2025-08 归档">2025-08</a></h4>
@@ -168,8 +171,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                                        <p>
+                                        <p>本站内容仅供学习与技术研究用途，无意传播或倡导任何违反法律法规的行为。在此声明：用户须自行了解所在地法律法规，合法合规使用；因使用不当产生的法律责任，与本站及作者无关；请在使用前仔细阅读本声明，继续使用即视为同意以上条款。</p>
+                    <p>
                                                 <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
                                                 <a href="/paid-subscribe/">推荐机场</a> |
                                                 <a href="/news/">新闻资讯</a> |
                                                 <a href="/client.htm">客户端</a> |
@@ -178,7 +183,7 @@
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                    <p class="p-small">
+                                        <p class="p-small">
                         Top VPN分享 机场订阅节点中文网 版权所有
                         <br />
                         Powered by WordPress

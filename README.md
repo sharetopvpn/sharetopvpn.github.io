@@ -1,4 +1,4 @@
-# 分享顶级VPN - 11月19日19.3M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，VPN梯子购买推荐  更新时间 2025-11-19 08:12:22
+# 分享顶级VPN - 11月28日19.5M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，VPN梯子购买推荐  更新时间 2025-11-28 09:37:17
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://sharetopvpn.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://sharetopvpn.github.io/uploads/2025/11/0-20251119.yaml
-- https://sharetopvpn.github.io/uploads/2025/11/1-20251119.yaml
-- https://sharetopvpn.github.io/uploads/2025/11/2-20251119.yaml
-- https://sharetopvpn.github.io/uploads/2025/11/3-20251119.yaml
-- https://sharetopvpn.github.io/uploads/2025/11/4-20251119.yaml
+- https://sharetopvpn.github.io/uploads/2025/11/0-20251128.yaml
+- https://sharetopvpn.github.io/uploads/2025/11/1-20251128.yaml
+- https://sharetopvpn.github.io/uploads/2025/11/2-20251128.yaml
+- https://sharetopvpn.github.io/uploads/2025/11/3-20251128.yaml
+- https://sharetopvpn.github.io/uploads/2025/11/4-20251128.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://sharetopvpn.github.io/uploads/2025/11/0-20251119.txt
-- https://sharetopvpn.github.io/uploads/2025/11/1-20251119.txt
-- https://sharetopvpn.github.io/uploads/2025/11/2-20251119.txt
-- https://sharetopvpn.github.io/uploads/2025/11/3-20251119.txt
-- https://sharetopvpn.github.io/uploads/2025/11/4-20251119.txt
+- https://sharetopvpn.github.io/uploads/2025/11/0-20251128.txt
+- https://sharetopvpn.github.io/uploads/2025/11/1-20251128.txt
+- https://sharetopvpn.github.io/uploads/2025/11/2-20251128.txt
+- https://sharetopvpn.github.io/uploads/2025/11/3-20251128.txt
+- https://sharetopvpn.github.io/uploads/2025/11/4-20251128.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://sharetopvpn.github.io/uploads/2025/11/20251119.json
+- https://sharetopvpn.github.io/uploads/2025/11/20251128.json
 
 ## 更多Clash节点订阅 ：
 

@@ -295,14 +295,13 @@ Clash测试延迟特指经过Clash代理转发时产生的额外时间，而普�
 <p data-start="2961" data-end="3203" data-is-last-node="" data-is-only-node="">本文以深入浅出的语言层层剖析了Clash测试延迟的概念、影响因素和优化策略，既有理论高度，又紧贴实际应用，极具指导意义。文章结构清晰，逻辑严密，内容覆盖网络环境、服务器选址、配置优化等多个关键维度，帮助读者全面把握降低延迟的关键点。特别是在优化策略部分，实用性强，便于用户迅速实施。FAQ环节针对性强，解答了大多数用户关心的问题，极大提升了文章的实用价值。整体文风专业且不失亲和力，兼顾技术深度和用户易懂性，是一篇不可多得的Clash优化指南，值得技术爱好者和普通用户细细品读与应用。</p></div>
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
-        <p>上一个：<a href="/free-nodes/clash-verge-rev-node-2026-8-5.htm">分享顶级VPN - 8月5日21.3M/S|免费SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点节点推荐，VPN梯子购买推荐</a></p>
         <p>下一个：<a href="/free-nodes/clash-node-github-2026-8-7.htm">分享顶级VPN - 8月7日21.4M/S|免费Trojan节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，VPN梯子购买推荐</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 支持 Trojan 吗？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 如何自动切换最优节点？</h5></div>
     <div class="panel-body">
-        支持。Nekoray 基于 sing-box 核心，能兼容 Trojan、Vmess、Vless、Hysteria2 等多种协议。用户可在同一界面中管理和切换不同类型节点，非常方便。<hr />    </div>
+        PassWall2 会定期测试节点延迟和丢包率，并结合策略组自动切换到最优节点。无需手动干预即可保证网页、视频和游戏流量高速稳定访问，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Matsuri 如何结合 Xray 内核实现多协议支持？</h5></div>
@@ -310,9 +309,14 @@ Clash测试延迟特指经过Clash代理转发时产生的额外时间，而普�
         Matsuri 可加载 Xray 核心，通过配置多 inbound/outbound 模块实现 VMess、VLess、Trojan 等协议共存。用户可在单一服务端配置文件中同时支持多客户端访问，便于统一管理。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议插件与加密方式如何搭配使用？</h5></div>
+    <div class="panel-heading"><h5>Nekoray 支持 Trojan 吗？</h5></div>
     <div class="panel-body">
-        协议插件可增强抗封锁能力，加密方式确保数据安全。合理搭配可模拟正常流量特征，同时保障传输安全，有助于在封锁严格环境下维持节点可用性和稳定连接。<hr />    </div>
+        支持。Nekoray 基于 sing-box 核心，能兼容 Trojan、Vmess、Vless、Hysteria2 等多种协议。用户可在同一界面中管理和切换不同类型节点，非常方便。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow 是否支持 IPv6 流量代理？</h5></div>
+    <div class="panel-body">
+        Mellow 支持 IPv6，只需在配置文件中启用 IPv6 DNS 解析并确认操作系统开启 IPv6 路由功能。部分节点若不支持 IPv6，则相关请求会自动回退到 IPv4，保证兼容性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 连接不稳定的常见原因有哪些？</h5></div>
@@ -320,19 +324,9 @@ Clash测试延迟特指经过Clash代理转发时产生的额外时间，而普�
         VMess 连接不稳定可能由节点延迟过高、服务器防火墙、TLS 配置错误或 ISP 丢包引起。建议测试不同传输协议（如 WS、gRPC）或切换节点，检查日志确认具体错误信息。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 的多路复用功能有哪些好处？</h5></div>
+    <div class="panel-heading"><h5>SSR 的协议插件与加密方式如何搭配使用？</h5></div>
     <div class="panel-body">
-        多路复用允许多个短连接共享同一 QUIC 通道，减少握手延迟和资源消耗。在高并发或频繁短连接场景下，能显著提升吞吐量和稳定性，尤其适合游戏或即时通讯应用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的 Rule Provider 功能有哪些好处？</h5></div>
-    <div class="panel-body">
-        Rule Provider 可通过远程订阅自动更新规则和节点，减少手动维护。结合策略组，可实现分流规则和节点的自动同步，保证分流效率和网络可用性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何自动切换最优节点？</h5></div>
-    <div class="panel-body">
-        PassWall2 会定期测试节点延迟和丢包率，并结合策略组自动切换到最优节点。无需手动干预即可保证网页、视频和游戏流量高速稳定访问，优化整体网络体验。<hr />    </div>
+        协议插件可增强抗封锁能力，加密方式确保数据安全。合理搭配可模拟正常流量特征，同时保障传输安全，有助于在封锁严格环境下维持节点可用性和稳定连接。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 的 Web 面板有什么用途？</h5></div>
@@ -340,14 +334,19 @@ Clash测试延迟特指经过Clash代理转发时产生的额外时间，而普�
         Hiddify Next 自带 Web 管理面板，管理员可通过浏览器管理用户、监控流量、生成订阅链接并部署节点。无需命令行操作，极大提高管理效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 的多路复用功能有哪些好处？</h5></div>
+    <div class="panel-body">
+        多路复用允许多个短连接共享同一 QUIC 通道，减少握手延迟和资源消耗。在高并发或频繁短连接场景下，能显著提升吞吐量和稳定性，尤其适合游戏或即时通讯应用。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 如何实现节点订阅自动更新？</h5></div>
     <div class="panel-body">
         支持订阅 URL 自动更新节点，程序定期下载并替换旧节点。保证节点列表最新，减少手动维护，提高使用效率和便利性，同时保证网络访问稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 是否支持 IPv6 流量代理？</h5></div>
+    <div class="panel-heading"><h5>Clash 的 Rule Provider 功能有哪些好处？</h5></div>
     <div class="panel-body">
-        Mellow 支持 IPv6，只需在配置文件中启用 IPv6 DNS 解析并确认操作系统开启 IPv6 路由功能。部分节点若不支持 IPv6，则相关请求会自动回退到 IPv4，保证兼容性。    </div>
+        Rule Provider 可通过远程订阅自动更新规则和节点，减少手动维护。结合策略组，可实现分流规则和节点的自动同步，保证分流效率和网络可用性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -395,15 +394,15 @@ Clash测试延迟特指经过Clash代理转发时产生的额外时间，而普�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-8-11.htm" title="分享顶级VPN - 8月11日21.4M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月11日21.4M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-30-clash-verge-rev-node-github.htm" title="分享顶级VPN - 7月30日21M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 7月30日21M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-26-clash-node.htm" title="分享顶级VPN - 7月26日21.7M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 7月26日21.7M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-2026-8-3.htm" title="分享顶级VPN - 8月3日18.4M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月3日18.4M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-22-clash-node-daily-updates.htm" title="分享顶级VPN - 7月22日21.7M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点/Trojan节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 7月22日21.7M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点/Trojan节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-28-clash-meta-github.htm" title="分享顶级VPN - 7月28日19M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 7月28日19M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-4-clash-stash-node.htm" title="分享顶级VPN - 8月4日18.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点/Trojan节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月4日18.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点/Trojan节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-14-clash-verge-rev-node-share.htm" title="分享顶级VPN - 7月14日20.5M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/SSR节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 7月14日20.5M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/SSR节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-23-clash-node-github.htm" title="分享顶级VPN - 7月23日22.9M/S|免费Trojan节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 7月23日22.9M/S|免费Trojan节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-node-2026-8-29.htm" title="分享顶级VPN - 8月29日19.8M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/Trojan节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月29日19.8M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点/Trojan节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-30-free-node-subscribe.htm" title="分享顶级VPN - 8月30日22.2M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/Clash节点/SSR节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月30日22.2M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/Clash节点/SSR节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-10-clash-verge-rev-nodes.htm" title="分享顶级VPN - 8月10日18.1M/S|免费Trojan节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月10日18.1M/S|免费Trojan节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-12-free-node-subscribe.htm" title="分享顶级VPN - 8月12日21.1M/S|免费Trojan节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月12日21.1M/S|免费Trojan节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-8-31.htm" title="分享顶级VPN - 8月31日23M/S|免费Clash节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月31日23M/S|免费Clash节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-17.htm" title="分享顶级VPN - 8月17日19M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月17日19M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-8-21.htm" title="分享顶级VPN - 8月21日20.9M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月21日20.9M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-8-15.htm" title="分享顶级VPN - 8月15日19.5M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月15日19.5M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-7.htm" title="分享顶级VPN - 8月7日21.4M/S|免费Trojan节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月7日21.4M/S|免费Trojan节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-8-13.htm" title="分享顶级VPN - 8月13日21.6M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/V2ray节点/Clash节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 8月13日21.6M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/V2ray节点/Clash节点节点推荐，VPN梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
@@ -416,10 +415,10 @@ Clash测试延迟特指经过Clash代理转发时产生的额外时间，而普�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>

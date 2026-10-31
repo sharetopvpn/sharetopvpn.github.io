@@ -307,24 +307,9 @@ A5：是的，优质DNS减少解析延迟，提升访问速度，是常见的优
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 中自定义脚本导致规则异常，该如何恢复？</h5></div>
-    <div class="panel-body">
-        先停用或删除最近添加的自定义脚本，重启应用并观察网络行为是否恢复。若无法恢复，备份并重置配置为默认，然后逐个添加脚本以定位导致异常的具体脚本并修复。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的规则订阅更新机制是怎样的？</h5></div>
     <div class="panel-body">
         Sing-box 支持远程规则订阅 URL，可自动下载并更新节点和分流规则。用户可设置更新频率，如每天或每小时，确保规则和节点始终保持最新状态，提高网络管理效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 是否支持多节点测试？</h5></div>
-    <div class="panel-body">
-        Potatso Lite 支持手动测试单个节点延迟，但不支持批量自动测速。用户需逐个连接测试节点性能，或者结合其他客户端获取更全面的测速信息。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 相比 Clash Premium 有哪些改进？</h5></div>
-    <div class="panel-body">
-        Mihomo 作为 Clash Premium 的开源替代品，移除了闭源依赖并优化了内存管理。它支持更多自定义规则和插件扩展，对开发者更友好，同时保持与 Clash 配置完全兼容。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 节点订阅更新不成功怎么办？</h5></div>
@@ -332,9 +317,19 @@ A5：是的，优质DNS减少解析延迟，提升访问速度，是常见的优
         检查订阅 URL 是否有效并确保网络通畅。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，确保稳定科学上网体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 是什么？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 的自动切换功能如何配置？</h5></div>
     <div class="panel-body">
-        Mihomo 是 Clash Premium 的开源替代项目，兼容原版 Clash 配置文件并扩展了部分新功能。它性能优异、内存占用低，适用于希望自定义构建代理环境的高级用户。<hr />    </div>
+        Shadowrocket 支持根据策略组和节点延迟自动切换最优节点。用户可设置测速频率和延迟阈值，程序会定期测试节点并自动切换，以保证网络稳定性和速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 相比 Clash Premium 有哪些改进？</h5></div>
+    <div class="panel-body">
+        Mihomo 作为 Clash Premium 的开源替代品，移除了闭源依赖并优化了内存管理。它支持更多自定义规则和插件扩展，对开发者更友好，同时保持与 Clash 配置完全兼容。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 是否支持多节点测试？</h5></div>
+    <div class="panel-body">
+        Potatso Lite 支持手动测试单个节点延迟，但不支持批量自动测速。用户需逐个连接测试节点性能，或者结合其他客户端获取更全面的测速信息。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 配置 TLS+WebSocket 有哪些性能优势？</h5></div>
@@ -342,14 +337,19 @@ A5：是的，优质DNS减少解析延迟，提升访问速度，是常见的优
         TLS+WebSocket 可伪装 HTTPS 流量，增强抗封锁能力，同时降低被检测风险。结合策略组和节点延迟检测，可保证访问速度和连接稳定性，特别适合视频和游戏场景。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的自动切换功能如何配置？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 支持根据策略组和节点延迟自动切换最优节点。用户可设置测速频率和延迟阈值，程序会定期测试节点并自动切换，以保证网络稳定性和速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 的 Rule Provider 有什么作用？</h5></div>
     <div class="panel-body">
         Rule Provider 是 Clash 的规则分发机制。用户可以订阅不同的规则集，比如广告拦截、社交媒体、流媒体等，实现按需加载。它让配置文件更加简洁、动态更新，并支持多源规则管理。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 是什么？</h5></div>
+    <div class="panel-body">
+        Mihomo 是 Clash Premium 的开源替代项目，兼容原版 Clash 配置文件并扩展了部分新功能。它性能优异、内存占用低，适用于希望自定义构建代理环境的高级用户。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Quantumult X 中自定义脚本导致规则异常，该如何恢复？</h5></div>
+    <div class="panel-body">
+        先停用或删除最近添加的自定义脚本，重启应用并观察网络行为是否恢复。若无法恢复，备份并重置配置为默认，然后逐个添加脚本以定位导致异常的具体脚本并修复。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray PAC 模式如何提高访问速度和便利性？</h5></div>
@@ -384,11 +384,11 @@ A5：是的，优质DNS减少解析延迟，提升访问速度，是常见的优
     <div class="panel-body">
         <div class="row">
             <div class="text-center">
-                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
+                <a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
                     <img src="/assets/website/img/G/xingchen.webp" class="avatar" alt="星辰机场">
                 </a>
                 <dl>
-                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
                     <dd>
                         <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p>                    </dd>
                 </dl>
@@ -402,16 +402,16 @@ A5：是的，优质DNS减少解析延迟，提升访问速度，是常见的优
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-10-1.htm" title="分享顶级VPN - 10月1日22.4M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月1日22.4M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-20-clash-node.htm" title="分享顶级VPN - 10月20日19.9M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月20日19.9M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-24-clash-node-daily-updates.htm" title="分享顶级VPN - 9月24日18.9M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月24日18.9M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-10-9.htm" title="分享顶级VPN - 10月9日22.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月9日22.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-8-free-node-subscribe.htm" title="分享顶级VPN - 10月8日20.2M/S|免费SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月8日20.2M/S|免费SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-10-clash-meta-github.htm" title="分享顶级VPN - 9月10日20.6M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月10日20.6M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-10-31.htm" title="分享顶级VPN - 10月31日19M/S|免费V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月31日19M/S|免费V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-10-25.htm" title="分享顶级VPN - 10月25日19.7M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月25日19.7M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-24-free-node-subscribe.htm" title="分享顶级VPN - 10月24日19.2M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月24日19.2M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-14-clash-verge-rev-node-github.htm" title="分享顶级VPN - 9月14日19.7M/S|免费Clash节点/V2ray节点/Trojan节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月14日19.7M/S|免费Clash节点/V2ray节点/Trojan节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-9-23.htm" title="分享顶级VPN - 9月23日19.9M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月23日19.9M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-10-free-node-subscribe.htm" title="分享顶级VPN - 10月10日20.6M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月10日20.6M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-2-clash-verge-rev-node-github.htm" title="分享顶级VPN - 10月2日21.6M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月2日21.6M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-node-2026-9-11.htm" title="分享顶级VPN - 9月11日18.3M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月11日18.3M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-22-free-node-subscribe.htm" title="分享顶级VPN - 9月22日19.8M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月22日19.8M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-21.htm" title="分享顶级VPN - 9月21日20.6M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/V2ray节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月21日20.6M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/V2ray节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-16-free-node-subscribe.htm" title="分享顶级VPN - 9月16日18.1M/S|免费Clash节点/V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月16日18.1M/S|免费Clash节点/V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-20-clash-verge-rev-node-share.htm" title="分享顶级VPN - 9月20日19.4M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 9月20日19.4M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点节点推荐，VPN梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-10-23.htm" title="分享顶级VPN - 10月23日22M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点节点推荐，VPN梯子购买推荐">分享顶级VPN - 10月23日22M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点节点推荐，VPN梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -423,7 +423,7 @@ A5：是的，优质DNS减少解析延迟，提升访问速度，是常见的优
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
@@ -454,7 +454,7 @@ A5：是的，优质DNS减少解析延迟，提升访问速度，是常见的优
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
                                         <p class="p-small">
                         Top VPN分享 机场订阅节点中文网 版权所有
                         <br />
